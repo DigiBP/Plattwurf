@@ -1,4 +1,19 @@
-# DigiBP Camunda Template
+# Plattwurf
+
+Team "Platwurf" documents the assessment of the master course "Digitalization of Business Processes" at the University of Applied Sciences and Arts Northwestern Switzerland. Following authors contributed equally the artefacts and documentation: 
+* Andrea Ky
+* Kanan Mammadzada
+* Sufian Mian Muhammad
+
+## AS-IS Process Model and Description
+
+![alt text](/readmeAssets/ "AS-IS Model")
+
+
+
+## Camunda Versioning and Licence Info
+
+### DigiBP Camunda Template
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Deploy to Heroku](https://img.shields.io/badge/deploy%20to-Heroku-6762a6.svg?longCache=true)](https://heroku.com/deploy)
