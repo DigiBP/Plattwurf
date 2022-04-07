@@ -7,7 +7,7 @@ Team "Platwurf" documents the assessment of the master course "Digitalization of
 
 ## AS-IS Process Model and Description
 
-![alt text](/readmeAssets/ "AS-IS Model")
+![alt text](/AsIsDocs/AS-IS%20model.png?raw=true "AS-IS Model")
 
 
 
