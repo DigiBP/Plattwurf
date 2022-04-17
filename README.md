@@ -5,13 +5,23 @@ Team "Platwurf" documents the assessment of the master course "Digitalization of
 * Kanan Mammadzada
 * Sufian Mian Muhammad
 
-## AS-IS Process Model and Description
+## Use Case
+
+Digitization enables a flexible daily work and new types of learning. However, the flexible, time and space-independent, self-reliant work also changes the demands on colleagues. XY Bank has realized that its current HR process are mostly manually driven which causes inflexibility and being time consuming. Especially the new employee onboarding process  
+
+
+
+### AS-IS Process Model and Description
 
 ![alt text](/AsIsDocs/AS-IS%20model.png?raw=true "AS-IS Model")
 
 
 
-## Camunda Versioning and Licence Info
+### Process Optimization and Automation Proposal based on Empathy Map
+
+
+
+
 
 ### DigiBP Camunda Template
 
