@@ -19,7 +19,7 @@ Digitization enables a flexible daily work and new types of learning. However, t
 
 ### Process Optimization and Automation Proposal based on Empathy Map
 
-![alt text](/AsIsDocs/AS-IS%20model.png?raw=true "Empathy Map")
+![alt text](/AsIsDocs/Empathy Map.pptx?raw=true "Empathy Map")
 
 
 
