@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_04huwss" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.12.0">
+  <decision id="Decision_1718ous" name="Register for company pension">
+    <decisionTable id="DecisionTable_1tyk013" hitPolicy="ANY">
+      <input id="Input_1" label="Registered with another pension fund " biodi:width="350">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>Registeredwithanotherpensionfund</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0v8t9rx">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1np9d4w" label="Employment Level" biodi:width="257">
+        <inputExpression id="LiteralExpression_1d9tlp6" typeRef="string">
+          <text>EmploymentLevel</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0end6ly">
+          <text>"Intern","Junior","Senior","Executive"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0d5dzej" label="ID Type">
+        <inputExpression id="LiteralExpression_1ngli1k" typeRef="string">
+          <text>IDType</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_06lwd79">
+          <text>"EU","CH"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1voaqf8" label="Satisified with offered options" biodi:width="262">
+        <inputExpression id="LiteralExpression_1qf0gke" typeRef="string">
+          <text>Satisifiedwithofferedoptions</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0vliq7z">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Registered for pension" name="Registeredforpension" typeRef="string" biodi:width="230">
+        <outputValues id="UnaryTests_1oyzdk1">
+          <text>"Yes","No"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0rjpkbm">
+        <inputEntry id="UnaryTests_10gnt44">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jh93wh">
+          <text>"Intern"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d861dc">
+          <text>"CH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i9kjp6">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tshgrh">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19fw94z">
+        <inputEntry id="UnaryTests_18lrhfl">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0enjzbp">
+          <text>"Junior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_024rpfy">
+          <text>"EU"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1czdjgz">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10x0oea">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lpavu2">
+        <inputEntry id="UnaryTests_1k9hryc">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tz761m">
+          <text>"Senior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11ck4kz">
+          <text>"EU"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f48dwr">
+          <text>"Need more details"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q1lqb4">
+          <text>"Need revision"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i73smp">
+        <inputEntry id="UnaryTests_0zt2jou">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t2uwvh">
+          <text>"Executive"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q87tpb">
+          <text>"CH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vai5uk">
+          <text>"Options don't meet the requirements"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hgmg5n">
+          <text>"Can not register"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07s7897">
+        <inputEntry id="UnaryTests_1jqunok">
+          <text>"Not registered at all"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iea6su">
+          <text>"Junior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09ikvcr">
+          <text>"CH"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i28bl0">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_111u3u5">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0hpaqxb" name="Setup Payroll">
+    <decisionTable id="DecisionTable_1ur5xz2" hitPolicy="ANY">
+      <input id="InputClause_0i1xmbo" label="Employment Level  " biodi:width="231">
+        <inputExpression id="LiteralExpression_0uosxzz" typeRef="string">
+          <text>EmploymentLevel  </text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0vidjui">
+          <text>"Intern","Junior","Senior","Executive"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1xhca6m" label="Bank Details  ">
+        <inputExpression id="LiteralExpression_0t9tc0b" typeRef="string">
+          <text>BankDetails</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0wtz8hq">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0b85dnk" label="Personal Data  ">
+        <inputExpression id="LiteralExpression_16kk1so" typeRef="string">
+          <text>PersonalData</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1ls2e67">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_13nntzy" label="Bonus">
+        <inputExpression id="LiteralExpression_10vg12l" typeRef="string">
+          <text>Bonus</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0kexf67">
+          <text>"Yes","No","Fixed","Based on Performance"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_06gx4li" label="Registered for Payroll" name="RegisteredforPayroll" typeRef="string" biodi:width="354">
+        <outputValues id="UnaryTests_00vii1g">
+          <text>"Request bank details","Yes"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1hmhj2n">
+        <inputEntry id="UnaryTests_0ff0nty">
+          <text>"Intern"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fzdnjf">
+          <text>"Details are not correct"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02hiphl">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s28uo3">
+          <text>"No"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t5wfl2">
+          <text>"Request ​bank details"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13nwgk3">
+        <inputEntry id="UnaryTests_15sgcv1">
+          <text>"Junior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u7jvlo">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kehnx2">
+          <text>"Missing education certificate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kt8tvx">
+          <text>"Based on performance"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_062ita4">
+          <text>"Request full personal data"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01vj2pq">
+        <inputEntry id="UnaryTests_07ntcz7">
+          <text>"Senior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dmz153">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tjf55g">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d3jtkx">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a8qenq">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t7pvaw">
+        <inputEntry id="UnaryTests_0z3zhz9">
+          <text>"Executive"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09ge25q">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j8cw6k">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03ctmcm">
+          <text>"Fixed"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19yrnkj">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_176rdxh" name="Assign Mandatory Training">
+    <decisionTable id="DecisionTable_0qgqkiy" hitPolicy="ANY">
+      <input id="InputClause_0oi53tw" label="Time to Compliation  ">
+        <inputExpression id="LiteralExpression_1pii09s" typeRef="string">
+          <text>Timeto​Compliation</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1cvc7rs">
+          <text>"On Time","Not on Time"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0nxeqns" label="Assessment Result  ">
+        <inputExpression id="LiteralExpression_1j1mqjm" typeRef="string">
+          <text>Assessment​Result</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_044unvh">
+          <text>"Passed"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_05n1fi3">
+        <inputExpression id="LiteralExpression_0xmqv31" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_13z949t" label="Training ended successfully  " name="Trainingendedsuccessfully" typeRef="string" biodi:width="271">
+        <outputValues id="UnaryTests_136ns2g">
+          <text>"Yes"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0l6wwyu">
+        <inputEntry id="UnaryTests_1c9n2ic">
+          <text>"On Time"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qkjmkr">
+          <text>"Passed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xsfxyv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08kjju5">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eqf3c3">
+        <inputEntry id="UnaryTests_1fl0g37">
+          <text>"On Time"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qpyjlo">
+          <text>"Not Passed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0un93im">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m79f68">
+          <text>"Warning email to redo the assessment"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19upgkz">
+        <inputEntry id="UnaryTests_13bczun">
+          <text>"On Time"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kg2nxw">
+          <text>"Not Passed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0614ici">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s4cv2b">
+          <text>"Manager gets notified on the 2nd fail"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06k9l7j">
+        <inputEntry id="UnaryTests_0b68m8k">
+          <text>"Not on Time"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00z9z4t">
+          <text>"Passed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vuk4ou">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lfhsbt">
+          <text>"No"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m23ljn">
+        <inputEntry id="UnaryTests_082sv66">
+          <text>"Not on Time"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n2enz7">
+          <text>"Not Passed</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ngn1l9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0djsbym">
+          <text>"No, manager and HR gets notified"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0ja9oj1" name="Discuss Role Profile">
+    <decisionTable id="DecisionTable_0ifdqoa" hitPolicy="ANY">
+      <input id="InputClause_1elt4t4" label="Experience  ">
+        <inputExpression id="LiteralExpression_167xck9" typeRef="integer">
+          <text>Experience</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0sl1e6e" label="Employment Level  ">
+        <inputExpression id="LiteralExpression_12kra5g" typeRef="string">
+          <text>EmploymentLevel</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1ey7971">
+          <text>"Intern","Junior","Senior","Executive"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_01wa2gc" label="Satisified with the role responsibility  " biodi:width="305">
+        <inputExpression id="LiteralExpression_1697qy5" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1t16rg8" label="Ready to Move Ahead" name="Readytomoveahead" typeRef="string" biodi:width="316">
+        <outputValues id="UnaryTests_1nztctk">
+          <text>"Yes","No","Need more details"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1l7o2h7">
+        <inputEntry id="UnaryTests_08afx9n">
+          <text>[0..1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aqvs0a">
+          <text>"Intern"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d1ndj4">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kznlzq">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hm1ngj">
+        <inputEntry id="UnaryTests_1nomokj">
+          <text>[2..5]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06qn6f6">
+          <text>"Junior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ez0d6">
+          <text>"Need elaboration on the description"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02siigf">
+          <text>"Need to think on the offer"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b3tgc9">
+        <inputEntry id="UnaryTests_163alqg">
+          <text>[5..10]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1617nom">
+          <text>"Senior"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wwua19">
+          <text>"Doesn't match the expectation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19qp211">
+          <text>"No"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1o7gw9y">
+        <inputEntry id="UnaryTests_1i4cfqe">
+          <text>[10..15]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cv8hj4">
+          <text>"Executive"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mffmoe">
+          <text>"The role covers broad area"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03bwgk3">
+          <text>"Need to negotiate the terms"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0n3g5hn">
+        <inputEntry id="UnaryTests_1lh1yii">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gk9fms">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1et56l6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a4c2h1">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_1m4tc7k" name="Request Access and Hardware">
+    <decisionTable id="DecisionTable_1lha0qy" hitPolicy="ANY">
+      <input id="InputClause_1beowex" label="Require Laptop">
+        <inputExpression id="LiteralExpression_0clgcro" typeRef="string">
+          <text>Possessowndevice</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0fg2ea1">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0vrsmo9" label="Require Desktop">
+        <inputExpression id="LiteralExpression_10dsifw" typeRef="string">
+          <text>RequireDesktop</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1dbz4dv">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1m29rwe" label="Require Virtual Machine" biodi:width="218">
+        <inputExpression id="LiteralExpression_155dca3" typeRef="string">
+          <text>RequireVirtualMachine</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1x32zay">
+          <text>"Yes","No"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0klzdyr" label="What kind of access do you need" biodi:width="271">
+        <inputExpression id="LiteralExpression_0auzjzy" typeRef="string">
+          <text>Whatkindofaccessdoyouneed</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_04w0of9">
+          <text>"Standard","Department Specific","Admin"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_062pl5g" label="Approved by Manager">
+        <inputExpression id="LiteralExpression_0kvf6r3" typeRef="string">
+          <text>ApprovedbyManager</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1ysle8s">
+          <text>"Yes","No","Need to discuss"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_147zfwg" label="Requests fulfilled" name="Requestsfulfilled" typeRef="string">
+        <outputValues id="UnaryTests_0r7nvmj">
+          <text>"Yes","No"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1wnkanf">
+        <inputEntry id="UnaryTests_1nklbtb">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xpnq1d">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08u5dln">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w7tjwb">
+          <text>"Standard", "Department Specific", "Admin"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t95t65">
+          <text>"No"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0koxtxf">
+          <text>"Check the request"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jaf9ew">
+        <inputEntry id="UnaryTests_1wew83f">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ff9i76">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15lbicv">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_125dqq8">
+          <text>"Standard"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08yu9aw">
+          <text>"Check the reason"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ehbgpu">
+          <text>"On hold"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ecgn23">
+        <inputEntry id="UnaryTests_1lj1b8u">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l4rhh7">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12u1ll9">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mmv1yu">
+          <text>"Admin", "Standard"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16h40bp">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qco10p">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hkytps">
+        <inputEntry id="UnaryTests_0t3acxl">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0er92ff">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19t25un">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lw8ai3">
+          <text>"Standard"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05pxbdv">
+          <text>"Yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h41qx7">
+          <text>"Yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1379hel">
+        <inputEntry id="UnaryTests_1czs0y0">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_198adnz">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m3qqvp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eiesqj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0saw1xc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nykqm6">
+          <text>-</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gx3hsq">
+        <inputEntry id="UnaryTests_1mdibvm">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wmcigd">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bq0sxq">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1voize6">
+          <text>"Standard", "Admin"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ttolb8">
+          <text>"No"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mnr10t">
+          <text>"No"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1718ous">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0pym3hi" dmnElementRef="Decision_0hpaqxb">
+        <dc:Bounds height="80" width="180" x="160" y="220" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_14c910j" dmnElementRef="Decision_176rdxh">
+        <dc:Bounds height="80" width="180" x="160" y="370" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_18b46es" dmnElementRef="Decision_0ja9oj1">
+        <dc:Bounds height="80" width="180" x="160" y="520" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_01smv8e" dmnElementRef="Decision_1m4tc7k">
+        <dc:Bounds height="80" width="180" x="160" y="650" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
