@@ -1,28 +1,37 @@
 # Plattwurf
 
-Team "Platwurf" documents the assessment of the master course "Digitalization of Business Processes" at the University of Applied Sciences and Arts Northwestern Switzerland. Following authors contributed equally the artefacts and documentation: 
+Team "Plattwurf" documents the assessment of the master course "Digitalization of Business Processes" at the University of Applied Sciences and Arts Northwestern Switzerland by following authors:
 * Andrea Ky
 * Kanan Mammadzada
 * Sufian Mian Muhammad
 
 ## Use Case
 
-Digitization enables a flexible daily work and new types of learning. However, the flexible, time and space-independent, self-reliant work also changes the demands on colleagues. XY Bank has realized that its current HR process are mostly manually driven which causes inflexibility and being time consuming. Especially the new employee onboarding process  
+Digitization enables a flexible daily work, new types of learning and increasing user-centric services. However, the flexible time, space-independent and self-reliant work also changes the demands on employees. Digi Bank has realized that its current HR process are mostly manually driven which causes inflexibility and are being time consuming. Especially the "new employee onboarding" process caused a high dissatisfaction of new employees. The purpose of this case is to enhance the new employee experience by reengineering the current "new employee onboarding" process.
 
+The new "new employee onboarding" process will be a simplified prototype due the deadline project restrictions of the university. The prototpye will add value for Digi Bank and meet the requirements of university rules by providing:
 
+* the to-be modell in BPMN 2.0 focussing of onboarding one employee
+* digitalized mock-up of the FAQ bot
 
-### AS-IS Process Model and Description
+## AS-IS Process Model and Description
+
+Digi Bank founded in 2018, specializing in digital assets and cryptocurrencies, the new employee onboarding process were not one of the key process at the initial phase, so every tasks was basically manually driven. By the time Digi Bank is growing more rapidly and hiring new employee under the slogan "find the right people at the right time" especially with IT background becomes crucial. 
+
+### Process Description
 
 ![alt text](/AsIsDocs/AS-IS%20model.png?raw=true "AS-IS Model")
 
 
 
-### Process Optimization and Automation Proposal based on Empathy Map
+
+
+## Process Optimization and Automation Proposal based on Empathy Map
 
 ![alt text](/AsIsDocs/EmpathyMap.png?raw=true "Empathy Map")
 
 
-### To-Be Process Model and Description
+## To-Be Process Model and Description
 
 
 
